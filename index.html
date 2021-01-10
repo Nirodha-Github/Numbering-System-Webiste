@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Let's Learn to Convert Numbering System</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top mb-5">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">logo</a>
+                    
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="#about"><span class="fa fa-home fa-lg"></span>  About Site</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#con"><i class="fa fa-calculator" aria-hidden="true"></i> Converter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#prese"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i> Presentation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul>
+            </div>
+        </div> 
+      </nav> 
+     
+      <header class="jumbotron bg-white">
+           <div class="container p-2 m-2">
+       	       <div class="row row-header">
+       	            <div class="col-12 col-sm-6 order-sm-last">
+                        <h1>Let's Learn Numbering System</h1>        
+                    </div>
+                    <img class="col-12 col-sm-6 img-fluid order-sm-first" src="image/cover.jpg" width="313px" height="145px">
+               </div>
+           </div>
+       </header>
+
+    <div class="container">
+    	<div class="row row-content" id="about">
+    		<div class="col-12 col-sm-8">
+    			<h1>About Site</h1>
+    			<p>This is a simple web page for learning numbering system.That site has blog which had described numbering system and calculator which online tool for conversion number system. Here ,we talk about four numbering system and those are,
+    				<ul>
+    					<li>Decimal System</li>
+    					<li>Binary System</li>
+    					<li>Octal System</li>
+    					<li>Hexadecimal System</li>
+    				</ul>
+    			</p>
+    		</div>
+    		<div class="col-12 col-sm-4"><img class=" img-fluid  img-thumbnail" src="image\about.jpg" width="100%"></div>
+    	</div>
+<hr>
+       
+
+    	<div class="row row-content alert-dark" id="con">
+    		<div class="card card-container col-sm-12 col-12">
+    			<h1 class="card-header"> <i class="fa fa-calculator fa-lg" aria-hidden="true"></i> Number System Converter</h1>
+    			<!--converter-->
+    			<form class="card-body" action="" name="myForm" onsubmit="return converter(this);" method="post">
+    				<div class="row  form-group">
+    				    <div class="col-6 col-sm-2">Select Number System</div>
+    				    <select  class="col-6 col-sm-2 custom-select" name="numSystemOne" id="numSystemOne">
+    							    <option value="Decimal" id="decimalO">Decimal</option>
+    							    <option value="Binary"  id="binaryO">Binary</option>
+    							    <option value="Octal" id="octallO">Octal</option>
+    							    <option value="Hexadecimal" id="hexadecimalO">Hexadecimal</option>
+    						     </select>	
+    			     	<h5 class="col-6 col-sm-2 offset-sm-1 offset-3 mt-2 border-2 p-1 bg-dark text-white rounded-circle mb-3"><center>Convert to<i class="fa fa-caret-right fa-lg d-none d-sm-block" aria-hidden="true"></i><i class="fa fa-caret-down fa-lg d-block d-sm-none" aria-hidden="true"></i></center></h5>
+    			    	<div class="col-6 col-sm-2">Select Number System</div>
+    				    <select class="col-6 col-sm-2 custom-select" name="numSystemTwo" id="numSystemTwo">
+    							    <option value="Decimal" id="decimalT">Decimal</option>
+    							    <option value="Binary" id="binarylT">Binary</option>
+    							    <option value="Octal" id="octalT">Octal</option>
+    							    <option value="Hexadecimal" id="hexadecimalT">Hexadecimal</option>
+    					</select>
+    				</div><br>
+    				<div class="row form-group">
+    				    <div class="col-6 col-sm-2 col-sm-2">Enter Value</div>
+    				    <input class="col-6 col-sm-2 form-control" id="number" type="text" name="number">
+    					<div class="col-12 col-sm-2 offset-sm-1 mt-3 mb-3"> </div>
+    					<div class="col-6 col-sm-2 col-sm-2" id="answer">Answer</div>
+    					<div class="col-6 col-sm-2"  id="answertext" > </div><br>
+    				</div>	
+    			    <div class="row">
+    			    	<input type="submit" class="btn col-sm-4 col-12 offset-sm-4  form-control " name="convert" id="convert" value="Convert">
+    			    </div>
+    			</form>   	
+    		</div>
+    	</div>
+	<hr>
+        <div class="row row-content" id="prese">
+
+        	<div class="col-sm-2 order-sm-last align-self-center"><h1 align="right" class="d-none d-sm-block"><i class="fa fa-hand-o-left" aria-hidden="true"></i>Presentation</h1><h1 align="center" class="d-block d-sm-none">Presentation</h1></div>
+    		
+            <div class="col-12 col-sm-10  order-sm-first">
+
+                  
+        
+                <div id="mycarousel" class="carousel slide bg-dark" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <center><img class="img-fluid m-1 pt-5" alt="slide1" src="Numbering System/slide1.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class=" img-fluid m-1 pt-5" alt="slide2" src="Numbering System/slide2.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class=" img-fluid m-1 pt-5" alt="slide3" src="Numbering System/slide3.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class="img-fluid m-1 pt-5" alt="slide4" src="Numbering System/slide4.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class=" img-fluid m-1 pt-5" alt="slide5" src="Numbering System/slide5.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class=" img-fluid m-1 pt-5" alt="slide6" src="Numbering System/slide6.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class="img-fluid m-1 pt-5" alt="slide7" src="Numbering System/slide7.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class=" img-fluid m-1 pt-5" alt="slide8" src="Numbering System/slide8.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class=" img-fluid m-1 pt-5" alt="slide9" src="Numbering System/slide9.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class="img-fluid m-1 pt-5" alt="slide10" src="Numbering System/slide10.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class=" img-fluid m-1 pt-5" alt="slide11" src="Numbering System/slide11.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class=" img-fluid m-1 pt-5" alt="slide12" src="Numbering System/slide12.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class="img-fluid m-1 pt-5" alt="slide13" src="Numbering System/slide13.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class=" img-fluid m-1 pt-5" alt="slide14" src="Numbering System/slide14.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class=" img-fluid m-1 pt-5" alt="slide15" src="Numbering System/slide15.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class="img-fluid m-1 pt-5" alt="slide16" src="Numbering System/slide16.jpg" width="720px;"></center>
+                        </div>
+                        <div class="carousel-item">
+                            <center><img class=" img-fluid m-1 pt-5" alt="slide17" src="Numbering System/slide17.jpg" width="720px;"></center>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                        <li data-target="#mycarousel" data-slide-to="3"></li>
+                        <li data-target="#mycarousel" data-slide-to="4"></li>
+                        <li data-target="#mycarousel" data-slide-to="5"></li>
+                        <li data-target="#mycarousel" data-slide-to="6"></li>
+                        <li data-target="#mycarousel" data-slide-to="7"></li>
+                        <li data-target="#mycarousel" data-slide-to="8"></li>
+                        <li data-target="#mycarousel" data-slide-to="9"></li>
+                        <li data-target="#mycarousel" data-slide-to="10"></li>
+                        <li data-target="#mycarousel" data-slide-to="11"></li>
+                        <li data-target="#mycarousel" data-slide-to="12"></li>
+                        <li data-target="#mycarousel" data-slide-to="13"></li>
+                        <li data-target="#mycarousel" data-slide-to="14"></li>
+                        <li data-target="#mycarousel" data-slide-to="15"></li>
+                        <li data-target="#mycarousel" data-slide-to="16"></li>
+                    </ol><div class="m-3"></div>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                    <div class="btn-group m-1" id="carouselButton">
+                      <button class="btn btn-secondary rounded-circle btn-sm" id="carousel-pause"><p class="d-none d-sm-block">Stop </p>
+                         <span class="fa fa-pause"></span>
+                      </button>
+                      <button class="btn btn-secondary rounded-circle btn-sm" id="carousel-play"><p class="d-none d-sm-block">Play</p>
+                         <span class="fa fa-play"></span>
+                      </button>
+                    </div>
+
+              
+            </div>
+    	</div> 
+</div>
+        <div class="row row-content" id="contact">
+        	<div class="col-12 col-sm-8">
+                <h1><center>Contact Us</center></h1>
+    			 <h5>Our Address</h5>
+                    <address>
+                         E-Learning,<br>
+                         Galle<br>
+                          <i class="fa fa-phone fa-lg"></i>: +94 1234 5678<br>
+                          <i class="fa fa-fax fa-lg"></i>: +94 8765 4321<br>
+                          <i class="fa fa-envelope fa-lg"></i>: 
+                          <a class="text-dark" href="learnwithfun@edu.net">learnwithfun@edu.net</a> 
+                   </address>
+    		</div>
+    		<div class="col-12 col-sm-4">
+    			   <img class="img-fluid" src="image/contact-us-service-icons_98292-5749.jpg" width="100%">
+    	    </div>
+    	</div>
+    </div>
+
+    <footer class="footer text-dark">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5 class="text-white">Navigation</h5>
+                    <ul class="list-unstyled navigation">
+                        <li><a href="#about">About Site</a></li>
+                        <li><a href="#con">Converter</a></li>
+                        <li><a href="#prese">Presentaion</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5 address">
+                    <h5 class="text-white">Our Address</h5>
+                    <address>
+                         E-Learning,<br>
+                         Galle<br>
+                          <i class="fa fa-phone fa-lg"></i>: +94 1234 5678<br>
+                          <i class="fa fa-fax fa-lg"></i>: +94 8765 4321<br>
+                          <i class="fa fa-envelope fa-lg"></i>: 
+                          <a href="learnwithfun@edu.net">learnwithfun@edu.net</a> 
+               </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center social">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:confusion@food.net"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto text-white">
+                    <p>© Copyright 2020 Let's Learn Numbering System</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+          <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
