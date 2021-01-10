@@ -1,0 +1,60 @@
+nav{
+	background-color: #000;
+
+}
+
+.jumbotron{
+	background-color: grey;
+	height:400px;
+	box-shadow: 0px 0px 5px 0px #000;
+
+}
+
+
+.row-content{
+	margin: 0px auto;
+	padding: 50px 0px 50px 0px;
+	border-bottom:1px ridge;
+	min-height: 300px; 
+}
+
+.footer{
+	background-color:#000;
+	margin: 0px auto;
+	padding: 20px 0px 20px 0px;
+	color: floralwhite;
+}
+
+
+.navigation li a,.address address,.address address a{
+	color: grey;
+
+}
+
+
+.navigation li a:hover,.address address:hover,.address address a:hover{
+	color: #fff;
+
+}
+
+
+#convert{
+	background-color:#000 ;
+	color: #fff;
+	
+}
+
+.social a{
+   background-color: #000;
+}
+
+option:hover{
+
+	background-color: #000;
+}
+
+
+
+
+
+
